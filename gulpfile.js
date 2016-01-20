@@ -57,6 +57,9 @@ var styles = lazypipe()
 
 gulp.task('styles', function () {
   return gulp.src(paths.styles)
+    .pipe(wiredep({
+      directory: 'bower_components'
+    }))
     .pipe(styles());
 });
 
