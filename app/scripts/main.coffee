@@ -14,6 +14,9 @@ require.config
     bootstrap: '../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap'
 
 require [
-  'backbone'
-], (Backbone) ->
+  'backbone','routes/hello'
+], (Backbone,Route) ->
+  new Route()
   Backbone.history.start()
+
+
