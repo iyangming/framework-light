@@ -5,4 +5,8 @@ define [
     routes: {
       "test":"test"
     }
-    test: () -> alert 123
+    test: () ->
+      require [
+        'views/hello'
+      ], (Hello) ->
+        h = new Hello()
